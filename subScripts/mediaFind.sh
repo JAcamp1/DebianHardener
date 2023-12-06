@@ -1,7 +1,27 @@
 #Script for finding all types of media considered "hacker tools"
 
+#.MP3s
+echo ".MP3s /n"
 echo "$(sudo find / -name '*.mp3' -type f)"
+read -p "delete .MP3s? Y/N" boo
+if [ $boo -eq "Y" ]
+then
+	echo "yes"
+	sudo find / -name '*.mp3' -type f -delete
+fi
+echo "/ndone... /n /n"
+
+#.MOVs
+echo ".MOVs /n"
 echo "$(sudo find / -name '*.mov' -type f)"
+read -p "delete .MOVs? Y/N" boo
+if [ $boo -eq "Y" ]
+then
+	echo "yes"
+	sudo find / -name '*.mov' -type f -delete
+fi
+echo "/ndone... /n /n"
+
 echo "$(sudo find / -name '*.mp4' -type f)"
 echo "$(sudo find / -name '*.avi' -type f)"
 echo "$(sudo find / -name '*.mpg' -type f)"
