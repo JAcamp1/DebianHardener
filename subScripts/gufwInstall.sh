@@ -2,4 +2,4 @@
 
 sudo apt install gufw -y
 
-gufw
+sudo gufw
