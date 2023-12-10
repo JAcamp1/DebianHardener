@@ -1,36 +1,174 @@
 #Script for finding all types of media considered "hacker tools"
 
+read -p "Directory to search? (Defaults to /home/) ... " activedir
+if [$activedir = ""]
+then
+	activedir="/home/"
+fi
+
+echo "Searching Directory '${activedir}'..."
+
 #.MP3s
-echo ".MP3s /n"
-echo "$(sudo find / -name '*.mp3' -type f)"
-read -p "delete .MP3s? Y/N" boo
-if [ $boo -eq "Y" ]
+printf ".MP3s \n \n"
+echo "$(sudo find / -wholename "${activedir}*.mp3" -type f)"
+read -p "delete .MP3s? Y/N ... " boo
+if [ $boo = "Y" ]
 then
 	echo "yes"
-	sudo find / -name '*.mp3' -type f -delete
+	sudo find / -wholename "${activedir}*.mp3" -type f -delete
 fi
-echo "/ndone... /n /n"
+printf "\ndone... \n \n"
 
 #.MOVs
-echo ".MOVs /n"
-echo "$(sudo find / -name '*.mov' -type f)"
-read -p "delete .MOVs? Y/N" boo
-if [ $boo -eq "Y" ]
+printf ".MOVs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.mov" -type f)"
+read -p "delete .MOVs? Y/N ... " boo
+if [ $boo = "Y" ]
 then
 	echo "yes"
-	sudo find / -name '*.mov' -type f -delete
+	sudo find / -wholename "${activedir}*.mov" -type f -delete
 fi
-echo "/ndone... /n /n"
+printf "\ndone... \n \n"
 
-echo "$(sudo find / -name '*.mp4' -type f)"
-echo "$(sudo find / -name '*.avi' -type f)"
-echo "$(sudo find / -name '*.mpg' -type f)"
-echo "$(sudo find / -name '*.mpeg' -type f)"
-echo "$(sudo find / -name '*.flac' -type f)"
-echo "$(sudo find / -name '*.m4a' -type f)"
-echo "$(sudo find / -name '*.flv' -type f)"
-echo "$(sudo find / -name '*.ogg' -type f)"
-echo "$(sudo find /home -name '*.gif' -type f)"
-echo "$(sudo find /home -name '*.png' -type f)"
-echo "$(sudo find /home -name '*.jpg' -type f)"
-echo "$(sudo find /home -name '*.jpeg' -type f)"
+#.MP4s
+printf ".MP4s \n \n"
+echo "$(sudo find / -wholename "${activedir}*.mp4" -type f)"
+read -p "delete .MP4s? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.mp4" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.TXTs
+printf ".MP4s \n \n"
+echo "$(sudo find / -wholename "${activedir}*.txt" -type f)"
+read -p "delete .MP4s? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.txt" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.AVIs
+printf ".AVIs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.avi" -type f)"
+read -p "delete .AVIs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.avi" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.MPGs
+printf ".MPGs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.mpg" -type f)"
+read -p "delete .MPGs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.mpg" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.MPEGs
+printf ".MPEGs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.mpeg" -type f)"
+read -p "delete .MPEGs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.mpeg" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.FLAVs
+printf ".FLAVs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.flav" -type f)"
+read -p "delete .FLAVs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.flav" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.M4As
+printf ".M4As \n \n"
+echo "$(sudo find / -wholename "${activedir}*.m4a" -type f)"
+read -p "delete .M4As? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.m4a" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.FLVs
+printf ".FLVs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.flv" -type f)"
+read -p "delete .FLVs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.flv" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.OGGs
+printf ".OGGs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.ogg" -type f)"
+read -p "delete .OGGs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.ogg" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.GIFs
+printf ".GIFs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.gif" -type f)"
+read -p "delete .GIFs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.gif" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.PNGs
+printf ".PNGs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.png" -type f)"
+read -p "delete .PNGs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.png" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.JPGs
+printf ".JPGs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.jpg" -type f)"
+read -p "delete .JPGs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.jpg" -type f -delete
+fi
+printf "\ndone... \n \n"
+
+#.JPEGs
+printf ".JPEGs \n \n"
+echo "$(sudo find / -wholename "${activedir}*.jpeg" -type f)"
+read -p "delete .JPEGs? Y/N ... " boo
+if [ $boo = "Y" ]
+then
+	echo "yes"
+	sudo find / -wholename "${activedir}*.jpeg" -type f -delete
+fi
+printf "\ndone... \n \n"
