@@ -11,4 +11,8 @@ sudo bash ./subScripts/listUsersAdmins.sh
 echo
 echo "Media Audit"
 echo
-sudo sh ./subScripts/mediaFind.sh
+sudo bash ./subScripts/mediaFind.sh
+echo
+echo "Mass Password Change"
+echo
+sudo bash ./subScripts/massReset.sh

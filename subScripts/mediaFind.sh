@@ -39,9 +39,9 @@ then
 fi
 printf "\ndone... \n \n"
 #.TXTs
-printf ".MP4s \n \n"
+printf ".TXTs \n \n"
 echo "$(sudo find / -wholename "${activedir}*.txt" -type f)"
-read -p "delete .MP4s? Y/N ... " boo
+read -p "delete .TXTs? Y/N ... " boo
 if [ $boo = "Y" ]
 then
 	echo "yes"
